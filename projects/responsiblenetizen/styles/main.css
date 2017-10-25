@@ -31,9 +31,13 @@ h1,h2,h3,h4,h5,h6,p
 	right:calc(50% - 50px);
 	background-color:#222222;
 	border-radius: 100px;
-	transition: transform 1s;
+	transition: transform 1s, box-shadow 1.25s;
 	transition-timing-function: ease-in-out;
 	z-index: 10;
+	box-shadow: 0px 0px 0px 0px black;
+}
+.section-icon.triggered
+{
 	box-shadow: 0px 0px 50px 1px black;
 }
 .section-icon-img
@@ -345,6 +349,9 @@ h1,h2,h3,h4,h5,h6,p
 		height:80px;
 		top:calc(50% - 40px);
 		right:calc(50% - 40px);
+	}
+	.section-icon.triggered
+	{
 		box-shadow: 0px 0px 25px 1px black;
 	}
 	.section-icon-img
@@ -426,6 +433,9 @@ h1,h2,h3,h4,h5,h6,p
 		height:80px;
 		top:calc(55% - 40px);
 		right:calc(50% - 40px);
+	}
+	.section-icon.triggered
+	{
 		box-shadow: 0px 0px 25px 1px black;
 	}
 	.section-icon-img
