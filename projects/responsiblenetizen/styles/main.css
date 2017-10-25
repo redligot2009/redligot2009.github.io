@@ -93,7 +93,7 @@ h1,h2,h3,h4,h5,h6,p
 {
 	display:inline-block;
 	position:absolute;
-	top:calc(90% - 10px);
+	bottom:5px;
 	right:calc(50% - 30px);
 	background-color: rgba(50,50,50,1);
 	border-color: black;
@@ -351,6 +351,18 @@ h1,h2,h3,h4,h5,h6,p
 		transform:scale(0.29);
 		right:4px;
 	}
+	.arrow-container
+	{
+		transform:scale(0.8);
+	}
+	.arrow-container:hover
+	{
+		transform:scale(0.85);
+	}
+	.arrow-container:active
+	{
+		transform:scale(0.78);
+	}
 }
 
 /*Mobile view*/
@@ -421,11 +433,11 @@ h1,h2,h3,h4,h5,h6,p
 	}
 	.arrow-up,.arrow-down
 	{
-		bottom:-100;
 		margin-bottom:0;
 	}
 	.arrow-container
 	{
+		bottom:100;
 		transform:scale(0.8);
 	}
 	.arrow-container:hover
