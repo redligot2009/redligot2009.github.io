@@ -424,6 +424,18 @@ h1,h2,h3,h4,h5,h6,p
 		bottom:-100;
 		margin-bottom:0;
 	}
+	.arrow-container
+	{
+		transform:scale(0.8);
+	}
+	.arrow-container:hover
+	{
+		transform:scale(0.85);
+	}
+	.arrow-container:active
+	{
+		transform:scale(0.78);
+	}
 }
 @media only screen and (max-width: 640px) and (min-height: 576px)
 {
