@@ -1,8 +1,19 @@
+html, body
+{
+	min-height: 100vh;
+	height:100%;
+}
 #main-container
 {
 	background-color: #EEEEEE;
-	height:100vh;
+	min-height: 100vh;
+	height:100%;
 	width:100%;
+	overflow:auto;
+}
+#projects
+{
+	max-width: 800px;
 }
 #projects h1, #projects h2, #projects h3
 {
@@ -31,6 +42,7 @@
 	padding-top: 25px;
 	padding-bottom: 25px;
 	border-radius: 15px;
+	margin-bottom: 25px;
 }
 .project
 {
@@ -44,6 +56,8 @@
 	border-radius: 15px;
 	background-size: cover; 
 	background-position: center;
+	width:100%;
+	padding: 0 15px 0 15px;
 }
 #projects h3
 {
