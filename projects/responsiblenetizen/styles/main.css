@@ -38,7 +38,7 @@ h1,h2,h3,h4,h5,h6,p
 }
 .section-icon.triggered
 {
-	box-shadow: 0px 0px 50px 1px black;
+	box-shadow: 0px 0px 25px 1px black;
 }
 .section-icon-img
 {
@@ -110,16 +110,16 @@ h1,h2,h3,h4,h5,h6,p
 	transition:transform 0.15s, box-shadow 0.15s;
 }
 
-.arrow-container:hover
+/*.arrow-container:hover
 {
 	box-shadow: 0px 0px 25px 1px black;
 	transform:scale(1.05);
-}
+}*/
 
 .arrow-container:active
 {
 	box-shadow: 0px 0px 10px 1px black;
-	transform:scale(0.99);
+	transform:scale(0.85);
 }
 
 .arrow-down 
@@ -352,7 +352,7 @@ h1,h2,h3,h4,h5,h6,p
 	}
 	.section-icon.triggered
 	{
-		box-shadow: 0px 0px 25px 1px black;
+		box-shadow: 0px 0px 15px 1px black;
 	}
 	.section-icon-img
 	{
@@ -363,13 +363,13 @@ h1,h2,h3,h4,h5,h6,p
 	{
 		transform:scale(0.8);
 	}
-	.arrow-container:hover
+	/*.arrow-container:hover
 	{
 		transform:scale(0.85);
-	}
+	}*/
 	.arrow-container:active
 	{
-		transform:scale(0.78);
+		transform:scale(0.70);
 	}
 }
 
@@ -436,7 +436,7 @@ h1,h2,h3,h4,h5,h6,p
 	}
 	.section-icon.triggered
 	{
-		box-shadow: 0px 0px 25px 1px black;
+		box-shadow: 0px 0px 15px 1px black;
 	}
 	.section-icon-img
 	{
@@ -452,13 +452,13 @@ h1,h2,h3,h4,h5,h6,p
 		bottom:100;
 		transform:scale(0.8);
 	}
-	.arrow-container:hover
+	/*.arrow-container:hover
 	{
 		transform:scale(0.85);
-	}
+	}*/
 	.arrow-container:active
 	{
-		transform:scale(0.78);
+		transform:scale(0.70);
 	}
 }
 @media only screen and (max-width: 640px) and (min-height: 576px)
