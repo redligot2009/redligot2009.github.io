@@ -15,7 +15,7 @@
 			<a href="#" style="text-decoration: none;"><span class="mark-as-red">Red's</span> Site
 			</a></h2>
 		</div>
-		<nav class="navbar navbar-expand-sm navbar-light bg-light">
+		<nav class="navbar navbar-expand-sm navbar-light">
 			<a href="#"><div class="navbar-brand"><span class="mark-as-red">Red's</span> Site</div></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBar" aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -36,6 +36,7 @@
 			</div>
 		</nav>
 	</div>
+	<div class="fader"></div>
 	<div class="content container-fluid">
 		<p>
 			<center><img src="img/reddrawing.png"></center>
@@ -65,6 +66,19 @@
 				$('.nav-bar-container').removeClass('shadow');
 			}
 		});
+		$(".navbar-toggler").click(
+			function()
+			{
+					if($("#navBar").hasClass("show"))
+					{
+							$(".fader").removeClass("triggered");
+					}
+					else
+					{
+							$(".fader").addClass("triggered");
+					}
+			}
+		);
 	</script>
 </body>
 </html>

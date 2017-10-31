@@ -66,14 +66,31 @@ footer
 	align-items: center;
 	justify-content: center;
 }
+/*Miscellaneous*/
 .shadow
 {
-	box-shadow: 0px 0px 2px black;
+	box-shadow: 0px -8px 15px black;
 }
 .mark-as-red
 {
 	color:red;
 }
+.fader
+{
+	position:fixed;
+	height:100vh;
+	width:100%;
+	background-color: rgba(0,0,0,0);
+	left:0;
+	top:0;
+	display:none;
+}
+.fader.triggered
+{
+	display:inline-block;
+	background-color: rgba(0,0,0,0.5);
+}
+/*Content*/
 #ul-about-me
 {
 	list-style-type:none;
