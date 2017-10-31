@@ -89,11 +89,16 @@ footer
 	left:0;
 	top:0;
 	display:none;
+	z-index:2;
 }
 .fader.triggered
 {
 	display:inline-block;
 	background-color: rgba(0,0,0,0.5);
+}
+.no-underline
+{
+	text-decoration: none !important;
 }
 /*Content*/
 #ul-about-me
@@ -104,8 +109,73 @@ footer
 #ul-about-me li
 {
 	text-align: center;
+	font-size: 20px;
+}
+.project-panel
+{
+	min-height:300px;
+	background-color: #CCCCCC;
+	border-left: 2px solid #AAA;
+	border-bottom: 2px solid #AAA;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	background-size: 120% !important;
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+	transition: background-size 0.25s;
+	margin-left: -15px !important;
+	margin-right: -15px !important;
+}
+.project-panel:hover
+{
+	background-size: 110% !important;
+}
+.project-panel:hover h2
+{
+	opacity:1;
+}
+.project-panel h2,.project-panel h3, .project-panel h4
+{
+	text-align: center;
+	color:black;
+	text-shadow: 0px 0px 5px white;
+}
+.project-panel:first-child
+{
+	border-left:none;
 }
 /*Tablets and Desktops*/
+@media only screen and (min-width: 768px)
+{
+	#ul-about-me li
+	{
+		font-size: 25px;
+	}
+	.nav-bar-head
+	{
+		height:100px;
+	}
+	.nav-bar-head h2
+	{
+		font-size: 60px;
+	}
+	.nav-link
+	{
+		font-size: 20px;
+	}
+	.content
+	{
+		margin-top: 200px;
+	}
+}
+@media only screen and (min-width: 576px) and (max-width: 767px)
+{
+	.content
+	{
+		margin-top: 150px;
+	}
+}
 @media only screen and (min-width: 576px)
 {
 	.nav-link:hover, .nav-link.active
@@ -120,10 +190,6 @@ footer
 	{
 		margin-left: auto;
 		margin-right: auto;
-	}
-	.content
-	{
-		margin-top: 150px;
 	}
 }
 /*Phones*/
@@ -160,6 +226,25 @@ footer
 	.content
 	{
 		margin-top: 80px;
+	}
+	.project-panel
+	{
+		border-left:none !important;
+	}
+	.project-panel h2
+	{
+		font-size: 25px;
+	}
+	.project-panel h3
+	{
+		font-size: 20px;
+	}
+}
+@media only screen and (max-width: 480px)
+{
+	#ul-about-me li
+	{
+		font-size: 16px;
 	}
 }
 /*Phones portrait*/
