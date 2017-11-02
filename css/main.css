@@ -20,21 +20,39 @@ html
 	position:relative;
 	min-height: 100%;
 }
+#navBar
+{
+	margin-top: 5px;
+}
 .nav-bar-container
 {
 	background-color: white;
+	transition: height 0.15s;
+	height: 150px;
 }
-.navbar-toggler
+.navbar-nav
 {
-	margin-right: 5px;
+	position:relative;
+	top:0;
+	transition: top 0.15s;
+}
+.nav-link:hover
+{
+	border-bottom: 2px solid #222222;
+}
+.nav-link.active
+{
+	border-bottom: 2px solid #FF2222;
 }
 .nav-bar-head
 {
 	font-size: 25px;
 	height:80px;
+	top:0;
 	position:relative;
 	margin-left:auto;
 	margin-right:auto;
+	transition: top 0.15s;
 }
 .nav-bar-head h2
 {
@@ -57,6 +75,11 @@ html
 	min-width: 60px;
 	transition:border-bottom 0.15s, background-color 0.15s;
 }
+#navBar
+{
+	margin-left: auto;
+	margin-right: auto;
+}
 footer
 {
 	position:absolute;
@@ -72,7 +95,7 @@ footer
 {
 }
 /*Miscellaneous*/
-.shadow
+.nav-bar-container.scrolling
 {
 	box-shadow: 0px -8px 15px black;
 }
@@ -168,6 +191,18 @@ footer
 	{
 		margin-top: 200px;
 	}
+	.nav-bar-container.scrolling
+	{
+		height:100px;
+	}
+	.nav-bar-head.scrolling
+	{
+		top:-100px;
+	}
+	.navbar-nav.scrolling
+	{
+		top:-90px;
+	}
 }
 @media only screen and (min-width: 576px) and (max-width: 767px)
 {
@@ -175,13 +210,21 @@ footer
 	{
 		margin-top: 150px;
 	}
+	.nav-bar-container.scrolling
+	{
+		height:80px;
+	}
+	.nav-bar-head.scrolling
+	{
+		top:-80px;
+	}
+	.navbar-nav.scrolling
+	{
+		top:-80px;
+	}
 }
 @media only screen and (min-width: 576px)
 {
-	.nav-link:hover, .nav-link.active
-	{
-		border-bottom: 2px solid #222222;
-	}
 	.navbar-brand
 	{
 		display:none;
@@ -195,6 +238,10 @@ footer
 /*Phones*/
 @media only screen and (max-width: 575px)
 {
+	.nav-bar-head h2
+	{
+		top:40px;
+	}
 	.navbar
 	{
 		padding-left: 0px;
@@ -206,26 +253,9 @@ footer
 		float:none;
 		padding-left: 15px;
 	}
-	.nav-bar-head
-	{
-		display:none;
-	}
-	.nav-link
-	{
-		text-align: center;
-		background-color: #EEEEEE;
-	}
-	.nav-link.active
-	{
-		background-color: #DFDFDF;
-	}
-	.nav-link:active
-	{
-		background-color:#CCCCCC;
-	}
 	.content
 	{
-		margin-top: 80px;
+		margin-top: 150px;
 	}
 	.project-panel
 	{
@@ -238,6 +268,18 @@ footer
 	.project-panel h3
 	{
 		font-size: 20px;
+	}
+	.nav-bar-container.scrolling
+	{
+		height:80px;
+	}
+	.nav-bar-head.scrolling
+	{
+		top:-80px;
+	}
+	.navbar-nav.scrolling
+	{
+		top:-80px;
 	}
 }
 @media only screen and (max-width: 480px)
