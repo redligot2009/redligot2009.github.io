@@ -11,7 +11,7 @@ body
 /*Menu Stuff*/
 #menu
 {
-	background-color: #ae353a;
+	background-color: #7c2629;
 	box-shadow: 1px 1px 7px;
 	padding-top: 0px;
 	padding-bottom: 0px;
@@ -26,6 +26,7 @@ body
 	margin-right:15px;
 	margin-left:15px;
 	color:white;
+	font-size: 15px;
     font-family: 'Montserrat', sans-serif;
 	border-bottom:5px solid transparent;
 	font-weight: bold;
