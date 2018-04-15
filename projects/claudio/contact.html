@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1.0, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+<body>
+	<div id="tagline-background">
+		<div id="tagline-container">
+			<div id="logo">
+				<img src="img/logo2.png" width="250px">
+			</div>
+			<div id="tagline">
+				<h1>BLACKQUEENKAI</h1>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		var featureImgLinks = [];
+	</script>
+	
+	<a id="feature_img_link">
+		<div id="feature_img">
+			<h1 class="feature_img_text">Events</h1>
+			<script>
+				featureImgLinks.push('announcements.html');
+			</script>
+			<img src="img/apophenia/apo2.jpg" class="feature_images">
+			<h1 class="feature_img_text">Portfolio</h1>
+			<script>
+				featureImgLinks.push('index.html');
+			</script>
+			<img src="img/art/img_kimjaejoong.jpg" class="feature_images">
+			<h1 class="feature_img_text">Comics</h1>
+			<script>
+				featureImgLinks.push('comics.html');
+			</script>
+			<img src="img/comics/buhayArtist.jpg" class="feature_images">
+			<h1 class="feature_img_text">About</h1>
+			<script>
+				featureImgLinks.push('about.html');
+			</script>
+			<img src="img/ClaudioAboutMe.jpg" class="feature_images">
+			<!--<h1 class="feature_img_text">Contact</h1>
+			<script>
+				featureImgLinks.push('contact.html');
+			</script>
+			<img src="img/fblogo.png" class="feature_images">-->
+		</div>
+	</a>
+
+	<div class="menu">
+		<a href="index.html"><div class="header">PORTFOLIO</div></a>
+		<a href="comics.html"><div class="header">COMICS</div></a>
+		<a href="about.html"><div class="header">ABOUT ME</div></a>
+		<a href="#"><div class="header header-active">CONTACT</div></a>
+		<a href="announcements.html"><div class="header">EVENTS</div></a>
+	</div>
+
+	<div style="clear:both;">
+	</div>
+
+	<div id="body">
+		<h1>CONTACT</h1>
+		<hr style="width:32vw;max-width: 350px;min-width: 225px">	
+		<div id="myContacts">
+			<div id="contactNumber">
+				<div id="contactNumberContent">
+					<h2>CONTACT NUMBER</h2>
+					<hr class="contactHR">
+					<h2>09278153693</h2>
+				</div>
+			</div>
+			<div id="contactEmail">
+				<div id="contactEmailContent">
+					<h2>EMAIL ADDRESSES</h2>
+					<hr class="contactHR">
+					<h2>kaikudo04@hotmail.com</h2>
+					<h2>kristinne.webtech@gmail.com</h2>
+				</div>
+			</div>
+			<div id="socialMedia">
+				<a href="https://www.facebook.com/kristinne.claudio" target=_blank><img src="img/fblogo.png" id="fb" class="socialMediaButtons"></a>
+				<a href="mailto:kristinne.webtech@gmail.com" target=_blank><img src="img/gmaillogo.png" id="gmail" class="socialMediaButtons"></a>
+				<a href="https://twitter.com/kai_kudo04?lang=en" target=_blank><img src="img/twitter.png" id="twitter" class="socialMediaButtons"></a>
+			</div>
+		</div>
+		<div style="clear:both;">
+		</div>
+	</div>
+
+	<div id="footer">
+		<p>BLACKQUEENKAI &copy; 2017</p>
+	</div>
+	<script>
+		var feature_img = document.getElementsByClassName("feature_images");
+		var feature_img_text = document.getElementsByClassName("feature_img_text");
+		var feature_imgButton = document.getElementById("feature_img_link");
+		var randomnumber = Math.floor(Math.random() * ((feature_img.length - 1) - 0 + 1)) + 0;
+		var myBGIndex = randomnumber;
+		setBackgroundImage();
+		var timer2 = setInterval(plusBGIndex,5000);
+		function plusBGIndex(n = 1)
+		{
+			myBGIndex += n;
+			setBackgroundImage();
+			clearInterval(timer2);
+			timer2 = setInterval(plusBGIndex,5000);
+		}
+		function setBackgroundImage()
+		{
+			if(myBGIndex > feature_img.length - 1)
+			{
+				myBGIndex = 0;
+			}
+			else if(myBGIndex < 0)
+			{
+				myBGIndex = feature_img.length - 1;
+			}
+			//feature_img.style.backgroundImage = "url('img/" + myBackgroundImg[myBGIndex] +"')";
+			for(var i = 0; i < feature_img.length; i++)
+			{
+				feature_img[i].style.transform.scale = 1;
+				feature_img[i].style.opacity = 0;
+				feature_img_text[i].style.opacity = 0;
+			}
+			feature_img[myBGIndex].style.opacity = 1;
+			feature_img[myBGIndex].style.animationName = "slowlyGrow";
+			feature_img_text[myBGIndex].style.opacity = 1;
+			feature_imgButton.href = featureImgLinks[myBGIndex];
+		}
+	</script>
+</body>
+</html>

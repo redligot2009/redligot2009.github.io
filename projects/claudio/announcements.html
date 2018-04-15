@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1.0, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+<body>
+	<div id="tagline-background">
+		<div id="tagline-container">
+			<div id="logo">
+				<img src="img/logo2.png" width="250px">
+			</div>
+			<div id="tagline">
+				<h1>BLACKQUEENKAI</h1>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		var featureImgLinks = [];
+	</script>
+
+	<a id="feature_img_link">
+		<div id="feature_img">
+			<!--<h1 class="feature_img_text">Events</h1>
+			<script>
+				featureImgLinks.push('announcements.html');
+			</script>
+			<img src="img/apophenia/apo2.jpg" class="feature_images">-->
+			<h1 class="feature_img_text">Portfolio</h1>
+			<script>
+				featureImgLinks.push('index.html');
+			</script>
+			<img src="img/art/img_kimjaejoong.jpg" class="feature_images">
+			<h1 class="feature_img_text">Comics</h1>
+			<script>
+				featureImgLinks.push('comics.html');
+			</script>
+			<img src="img/comics/buhayArtist.jpg" class="feature_images">
+			<h1 class="feature_img_text">About</h1>
+			<script>
+				featureImgLinks.push('about.html');
+			</script>
+			<img src="img/ClaudioAboutMe.jpg" class="feature_images">
+			<h1 class="feature_img_text">Contact</h1>
+			<script>
+				featureImgLinks.push('contact.html');
+			</script>
+			<img src="img/fblogo.png" class="feature_images">
+		</div>
+	</a>
+
+	<div class="menu">
+		<a href="index.html"><div class="header">PORTFOLIO</div></a>
+		<a href="comics.html"><div class="header">COMICS</div></a>
+		<a href="about.html"><div class="header">ABOUT ME</div></a>
+		<a href="contact.html"><div class="header">CONTACT</div></a>
+		<a href="#"><div class="header header-active">EVENTS</div></a>
+	</div>
+
+	<div style="clear:both;">
+	</div>
+	
+	<div id="body">
+		<h1>EVENTS</h1>
+		<hr style="width:32vw;max-width: 350px;min-width: 225px">
+		<div class="event_selector">
+			<a onclick="setLinkIndex(1, 'apo')">
+				<div class="event_selector_Button apo">APOPHENIA</div>
+			</a>
+			<a onclick="setLinkIndex(2,'ibuild')">
+				<div class="event_selector_Button ibuild">!BUILD</div>
+			</a>
+		</div>
+		<div style="clear:both;">
+		</div>
+		<div class="image_gallery">
+			<div class="images" id="announcements">
+				<a onclick="plusDivs(-1)">
+					<img class="image_arrow image_arrow_left" src="img/left-arrow.png">
+				</a>
+				<a onclick="plusDivs(1)">
+					<img class="image_arrow image_arrow_right" src="img/right-arrow.png">
+				</a>
+				<!-- Apophenia  -->
+				<img class="image_slides apo" src="img/apophenia/apo2.jpg">
+				<img class="image_slides apo" src="img/apophenia/apo6.jpg">
+				<img class="image_slides apo" src="img/apophenia/apo7.jpg">
+				<img class="image_slides apo" src="img/apophenia/apo8.jpg">
+				<img class="image_slides apo" src="img/apophenia/apo9.jpg">
+				<img class="image_slides apo" src="img/apophenia/apo10.jpg">
+				<!-- Apophenia END -->
+				<!-- I-Build 2017 -->
+				<img class="image_slides ibuild" src="img/ibuild/ibuild.jpg">
+				<!-- I-Build 2017 END -->
+			</div>
+			<div class="image_descriptions announcements">
+				<script>
+					var myLinks = [];
+					var myEvents = [];
+				</script>
+				<div class="image_description apo">
+					<h1>
+						Apophenia:
+					</h1>
+					<h2>
+						A Multimedia Arts Exhibit
+					</h2>
+					<hr class="contactHR">
+					<p style="font-size: 12px;color:#888888; font-style:italic; margin-top:-15px;margin-bottom: -15px;" id="shortDesc">
+						"Apophenia is the human tendency to perceive meaningful patterns within random data"
+					</p>
+					<p>
+						Witness and discover the creative minds of A406C LPU Manila's Multimedia Arts Students as they invite you to see things in different perspectives.
+					</p>
+
+					<h2>
+						March 17 - 19, 2017
+					</h2>
+
+					<script>
+						myLinks.push("https://www.facebook.com/Apophenia.lpu.mnl/");
+						myEvents.push("apo");
+					</script>
+				</div>
+				<div class="image_description ibuild">
+
+					<h1>
+						!BUILD 2017:
+					</h1>
+
+					<h2>
+						International Building Construction and Technology Expo
+					</h2>
+
+					<hr class="contactHR">
+
+					<p style="font-size: 12px;color:#888888; font-style:italic; margin-top:-15px;margin-bottom: -15px;" id="shortDesc">
+						"Breaking the grounds: making the Philippines a sustainable nation"
+					</p>
+
+					<p>
+						!BUILD 2017 will be a highly focused gateway for all local and international players in the building and construction industry.
+					</p>
+
+					<p>
+						It will provide focused presentation of Nations, Brands, Products and services related to Infrastructure and Construction Technology, a meeting point for suppliers, buyers, trade professionals and educational insights into building and construction.
+					</p>
+
+					<h2>
+						July 19 - 22, 2017
+					</h2>
+					
+					<script>
+						myLinks.push("https://www.facebook.com/events/245055522616028/");
+						myEvents.push("ibuild");
+					</script>
+
+				</div>
+			</div>
+			<a id="deviantArt" href="#" target="_blank">
+				<div class="backgroundOfButton" id="facebook">view on Facebook</div>
+			</a>
+		</div>
+	</div>
+
+	<div id="footer">
+		<p>BLACKQUEENKAI &copy; 2017</p>
+	</div>
+	<script>
+		var slideIndex = 1;
+		var linkIndex = 2;
+		showDivs(slideIndex);
+		setLinkIndex(1, 'apo');
+		
+		var timer = setInterval(plusDivs, 5000);
+
+		function setLinkIndex(i = 1, id = '')
+		{
+			linkIndex = i;
+			slideIndex = 1;
+			showDivs(1);
+			clearInterval(timer);
+			timer = setInterval(plusDivs, 5000);
+			var otherButtons = document.getElementsByClassName("event_selector_Button");
+			for(var i = 0; i < otherButtons.length; i ++)
+			{
+				otherButtons[i].style.padding = "15px 0px 15px 0px";
+				otherButtons[i].style.margin = "10px 0px 0px 0px";
+				otherButtons[i].className += " inactive";
+			}
+			var button = document.getElementsByClassName("event_selector_Button " + id);
+			button[0].style.padding = "20px 0px 20px 0px";
+			button[0].style.margin = "0px 0px 0px 0px";
+			button[0].className = button[0].className.replace( /(?:^|\s)inactive(?!\S)/g , '' );
+		}
+
+		function plusDivs(n = 1) {
+			showDivs(slideIndex += n);
+			clearInterval(timer);
+			timer = setInterval(plusDivs, 5000);
+		}
+		
+		function showDivs(n) {
+			var x = document.getElementsByClassName("image_slides " + myEvents[linkIndex-1]);
+			var z = document.getElementsByClassName("image_slides");
+			var y = document.getElementsByClassName("image_description");
+			var currEvent = document.getElementsByClassName("image_description " + myEvents[linkIndex-1]);
+			var button = document.getElementById("deviantArt");
+			if (n > x.length) {slideIndex = 1}    
+			if (n < 1) {slideIndex = x.length}
+			for (var i = 0; i < z.length; i++) {
+				z[i].style.opacity = 0;
+			}
+			var imageArrows = document.getElementsByClassName("image_arrow");
+			if(x.length <= 1)
+			{
+				for(var i = 0; i < imageArrows.length; i ++)
+				{
+					imageArrows[i].style.display = "none";
+				}
+			}
+			else
+			{
+				for(var i = 0; i < imageArrows.length; i ++)
+				{
+					imageArrows[i].style.display = "block";
+				}
+			}
+			for(var j = 0; j < y.length; j ++)
+			{
+				y[j].style.display = "none";
+			}
+			currEvent[0].style.display = "block";
+			x[slideIndex-1].style.opacity = 1;
+			button.href = myLinks[linkIndex-1];
+		}
+		var feature_img = document.getElementsByClassName("feature_images");
+		var feature_img_text = document.getElementsByClassName("feature_img_text");
+		var feature_imgButton = document.getElementById("feature_img_link");
+		var randomnumber = Math.floor(Math.random() * ((feature_img.length - 1) - 0 + 1)) + 0;
+		var myBGIndex = randomnumber;
+		setBackgroundImage();
+		var timer2 = setInterval(plusBGIndex,5000);
+		function plusBGIndex(n = 1)
+		{
+			myBGIndex += n;
+			setBackgroundImage();
+			clearInterval(timer2);
+			timer2 = setInterval(plusBGIndex,5000);
+		}
+		function setBackgroundImage()
+		{
+			if(myBGIndex > feature_img.length - 1)
+			{
+				myBGIndex = 0;
+			}
+			else if(myBGIndex < 0)
+			{
+				myBGIndex = feature_img.length - 1;
+			}
+			//feature_img.style.backgroundImage = "url('img/" + myBackgroundImg[myBGIndex] +"')";
+			for(var i = 0; i < feature_img.length; i++)
+			{
+				feature_img[i].style.transform.scale = 1;
+				feature_img[i].style.opacity = 0;
+				feature_img_text[i].style.opacity = 0;
+			}
+			feature_img[myBGIndex].style.opacity = 1;
+			feature_img[myBGIndex].style.animationName = "slowlyGrow";
+			feature_img_text[myBGIndex].style.opacity = 1;
+			feature_imgButton.href = featureImgLinks[myBGIndex];
+		}
+	</script>
+</body>
+</html>

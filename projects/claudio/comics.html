@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1.0, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+<body>
+	<div id="tagline-background">
+		<div id="tagline-container">
+			<div id="logo">
+				<img src="img/logo2.png" width="250px">
+			</div>
+			<div id="tagline">
+				<h1>BLACKQUEENKAI</h1>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		var featureImgLinks = [];
+	</script>
+
+	<a id="feature_img_link">
+		<div id="feature_img">
+			<h1 class="feature_img_text">Events</h1>
+			<script>
+				featureImgLinks.push('announcements.html');
+			</script>
+			<img src="img/apophenia/apo2.jpg" class="feature_images">
+			<h1 class="feature_img_text">Portfolio</h1>
+			<script>
+				featureImgLinks.push('index.html');
+			</script>
+			<img src="img/art/img_kimjaejoong.jpg" class="feature_images">
+			<!--<h1 class="feature_img_text">Comics</h1>
+			<script>
+				featureImgLinks.push('comics.html');
+			</script>
+			<img src="img/comics/buhayArtist.jpg" class="feature_images">-->
+			<h1 class="feature_img_text">About</h1>
+			<script>
+				featureImgLinks.push('about.html');
+			</script>
+			<img src="img/ClaudioAboutMe.jpg" class="feature_images">
+			<h1 class="feature_img_text">Contact</h1>
+			<script>
+				featureImgLinks.push('contact.html');
+			</script>
+			<img src="img/fblogo.png" class="feature_images">
+		</div>
+	</a>
+
+	<div class="menu">
+		<a href="index.html"><div class="header">PORTFOLIO</div></a>
+		<a href="#"><div class="header header-active">COMICS</div></a>
+		<a href="about.html"><div class="header">ABOUT ME</div></a>
+		<a href="contact.html"><div class="header">CONTACT</div></a>
+		<a href="announcements.html"><div class="header">EVENTS</div></a>
+	</div>
+
+	<div style="clear:both;">
+	</div>
+
+	<div id="body">
+		<h1>COMICS</h1>
+		<hr style="width:32vw;max-width: 350px;min-width: 225px">
+		<div class="image_gallery">
+			<div class="images">
+				<a onclick="plusDivs(-1)">
+					<img class="image_arrow image_arrow_left" src="img/left-arrow.png">
+				</a>
+				<a onclick="plusDivs(1)">
+					<img class="image_arrow image_arrow_right" src="img/right-arrow.png">
+				</a>
+				<img class="image_slides" src="img/comics/blackAndWhite.jpg">
+				<img class="image_slides" src="img/comics/buhayArtist.jpg">
+				<img class="image_slides" src="img/comics/paradox2.jpg">
+			</div>
+			<div class="image_descriptions">
+				<script>
+					var myLinks = [];
+				</script>
+				<div class="image_description">
+					<h1>
+						Black and White
+					</h1>
+					<p>
+						One of KAI's first comics, with her own original artwork. It is read from right to left like a manga.
+					</p>
+					<!--<a href="http://gacktsaga04.deviantart.com/art/Kosame-191674940" target="_blank">view on DeviantArt</a>-->
+					<script>
+						myLinks.push("http://blackqueenkai.deviantart.com/art/Page-1-457136416");
+					</script>
+				</div>
+				<div class="image_description">
+					<h1>
+						Ang Buhay Artist
+					</h1>
+					<p>
+						A collaboration work between KAI and her sister written by KAI in Filipino, and drawn by her sister. (KAI's sister: <a href="http://eyesberg.deviantart.com" target="_blank">eyesberg.deviantart.com</a>)
+					</p>
+					<!--<a href="http://gacktsaga04.deviantart.com/art/Sabaku-no-Gaara-colored-162693538" target="_blank">view on DeviantArt</a>-->
+					<script>
+						myLinks.push("http://blackqueenkai.deviantart.com/art/PAGE-1-399953873");
+					</script>
+				</div>
+				<div class="image_description">
+					<h1>
+						Paradox
+					</h1>
+					<p>
+						One of KAI's first comics, with her own original artwork. It is read from right to left like a manga.
+					</p>
+					<script>
+						myLinks.push("http://blackqueenkai.deviantart.com/art/Paradox-Page-1-Colored-Page-471732387");
+					</script>
+				</div>
+			</div>
+			<a id="deviantArt" href="#" target="_blank">
+				<div class="backgroundOfButton">view on DeviantArt</div>
+			</a>
+		</div>
+	</div>
+
+	<div id="footer">
+		<p>BLACKQUEENKAI &copy; 2017</p>
+	</div>
+	<script>
+		var slideIndex = 1;
+		showDivs(slideIndex);
+		
+		var timer = setInterval(plusDivs, 5000);
+
+		function plusDivs(n = 1) {
+			showDivs(slideIndex += n);
+			clearInterval(timer);
+			timer = setInterval(plusDivs, 5000);
+		}
+		
+		function showDivs(n) {
+			var x = document.getElementsByClassName("image_slides");
+			var y = document.getElementsByClassName("image_description");
+			var button = document.getElementById("deviantArt");
+			if (n > x.length) {slideIndex = 1}    
+			if (n < 1) {slideIndex = x.length}
+			for (var i = 0; i < x.length; i++) {
+				x[i].style.opacity = 0;
+				y[i].style.display = "none";
+			}
+			x[slideIndex-1].style.opacity = 1;
+			y[slideIndex-1].style.display = "block";
+			var myURL = myLinks[slideIndex-1];
+			button.href = myURL;
+		}
+		var feature_img = document.getElementsByClassName("feature_images");
+		var feature_img_text = document.getElementsByClassName("feature_img_text");
+		var feature_imgButton = document.getElementById("feature_img_link");
+		var randomnumber = Math.floor(Math.random() * ((feature_img.length - 1) - 0 + 1)) + 0;
+		var myBGIndex = randomnumber;
+		setBackgroundImage();
+		var timer2 = setInterval(plusBGIndex,5000);
+		function plusBGIndex(n = 1)
+		{
+			myBGIndex += n;
+			setBackgroundImage();
+			clearInterval(timer2);
+			timer2 = setInterval(plusBGIndex,5000);
+		}
+		function setBackgroundImage()
+		{
+			if(myBGIndex > feature_img.length - 1)
+			{
+				myBGIndex = 0;
+			}
+			else if(myBGIndex < 0)
+			{
+				myBGIndex = feature_img.length - 1;
+			}
+			//feature_img.style.backgroundImage = "url('img/" + myBackgroundImg[myBGIndex] +"')";
+			for(var i = 0; i < feature_img.length; i++)
+			{
+				feature_img[i].style.transform.scale = 1;
+				feature_img[i].style.opacity = 0;
+				feature_img_text[i].style.opacity = 0;
+			}
+			feature_img[myBGIndex].style.opacity = 1;
+			feature_img[myBGIndex].style.animationName = "slowlyGrow";
+			feature_img_text[myBGIndex].style.opacity = 1;
+			feature_imgButton.href = featureImgLinks[myBGIndex];
+		}
+	</script>
+</body>
+</html>
