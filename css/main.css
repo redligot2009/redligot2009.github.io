@@ -169,6 +169,24 @@ footer
 {
 	border-left:none;
 }
+
+img
+{
+	display:block;
+	max-width: 100%;
+	margin-left:auto;
+	margin-right: auto;
+}
+
+h1.subtitles
+{
+	font-family: 'Verdana';
+	font-weight: bolder;
+}
+.sublist
+{
+	list-style-type: disc; 
+}
 /*Tablets and Desktops*/
 @media only screen and (min-width: 768px)
 {
@@ -212,6 +230,10 @@ footer
 	{
 		font-size: 16px;
 	}
+	h1
+	{
+		font-size:40px;
+	}
 }
 @media only screen and (min-width: 576px) and (max-width: 767px)
 {
@@ -250,6 +272,10 @@ footer
 	{
 		margin-left: auto;
 		margin-right: auto;
+	}
+	h1
+	{
+		font-size:30px;
 	}
 }
 /*Phones*/
@@ -297,6 +323,10 @@ footer
 	.navbar-nav.scrolling
 	{
 		top:-80px;
+	}
+	h1
+	{
+		font-size:25px;
 	}
 }
 @media only screen and (max-width: 480px)
