@@ -2,6 +2,7 @@ body
 {
 	background-color: #EEEEEE;
 }
+html { position: relative; min-height: 100%; }
 /*Misc.*/
 #spark-logo-small
 {
@@ -41,12 +42,82 @@ body
 	border-color:#ffc55f;
 	/*#ffc55f*/
 }
+.nav-item
+{
+	text-align: center;
+}
+/*Breakpoint md for Bootstrap*/
+@media only screen and (max-width: 767px)
+{
+	.navbar-brand {
+  		transform: translateX(-50%);
+  		left: 50%;
+  		top:0px;
+  		position: absolute;
+	}
+	.navbar-toggler
+	{
+		min-height: 85px;
+		border:none;
+	}
+	#menu .navbar-collapse .navbar-nav .nav-link
+	{
+		border:none;
+		margin:0;
+		padding-bottom: 15px;
+		padding-top: 15px;
+	}
+	#menu .navbar-collapse .navbar-nav .nav-link:hover
+	{
+		background-color:#e8bd74;
+		/*#ffc55f*/
+	}
+	#menu .navbar-collapse .navbar-nav .nav-link.active
+	{
+		background-color:#381213;
+		/*#ffc55f*/
+	}
+	.navbar
+	{
+		padding-left: 0px!important;
+		padding-right: 0px!important;
+	}
+	.navbar-collapse
+	{
+		background-color: #5b1e20;
+	}
+}
 /*End Menu Stuff*/
+
+/*Sticky Footer*/
+.footer
+{
+	position:absolute;
+	bottom: 0;
+	width:100%;
+	height:80px;
+	background-color: #5b1e20;
+}
+#footer-content
+{
+	text-align: center;
+	color:#e8bd74;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+}
+/*End Sticky Footer*/
+
+/*Content of About Us Section*/
 #content
 {
 	padding-top: 100px;
+	padding-bottom: 100px;
 }
 .content-section h1,h2,h3,h4
 {
 	text-align: center;
+}
+.content-section
+{
+	max-width: 720px;
 }

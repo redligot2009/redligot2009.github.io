@@ -2,14 +2,22 @@
 <html>
 <head>
 	<title>SPARK - Samahan ng Progresibong Kabataan</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-	<nav class="navbar navbar-expand-md fixed-top" id="menu">
+	<nav class="navbar navbar-dark navbar-expand-md fixed-top" id="menu">
 		<a class="navbar-brand" href="#"><img src="img/sparknobg.png" id="spark-logo-small"></a>
-		<div class="collapse navbar-collapse">
+		<button class="navbar-toggler ml-auto float-xs-right" type="button" data-toggle="collapse" data-target="#menubar" aria-controls="menubar" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+		<div class="collapse navbar-collapse" id="menubar">
 			<div class="navbar-nav">
 				<a href="#">
 					<div class="nav-item nav-link active">HOME</div>
@@ -27,14 +35,21 @@
 		</div>
 	</nav>
 	<div id="content" class="container-fluid">
-		<div class="content-section" id="about-us-section">
-			<h2>ABOUT US</h2>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempus feugiat nulla, in scelerisque magna varius ac. Ut venenatis scelerisque tortor, eget lobortis mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. In ut tincidunt purus, id lacinia dui. Vivamus tortor leo, dignissim et odio eu, porta dapibus nibh. Nulla luctus egestas sapien sed ultrices. Suspendisse potenti. Maecenas dui ligula, ultrices vel eleifend sit amet, varius in sapien. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis mollis fermentum augue, a accumsan sem luctus in. 
-			</p>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempus feugiat nulla, in scelerisque magna varius ac. Ut venenatis scelerisque tortor, eget lobortis mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. In ut tincidunt purus, id lacinia dui. Vivamus tortor leo, dignissim et odio eu, porta dapibus nibh. Nulla luctus egestas sapien sed ultrices. Suspendisse potenti. Maecenas dui ligula, ultrices vel eleifend sit amet, varius in sapien. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis mollis fermentum augue, a accumsan sem luctus in. 
-			</p>
+		<div class="row justify-content-center">
+			<div class="col-10 content-section" id="about-us-section">
+				<center><img src="img/sparkwbg.png" width="400px"></center>
+				<h2>ABOUT US</h2>
+				<p>
+					SPARK is a national organization of young student-leaders who fight against the dangers of unbridled capitalism, side with the progressive and oppressed sectors of today's society, while offering alternatives to the status quo.
+				</p>
+			</div>
+		</div>
+	</div>
+	<footer class="container-fluid footer">
+		<div class="row h-100">
+			<div id="footer-content" class="col-sm-12 my-auto">
+				SPARK (Samahan ng Progresibong Kabataan), 2018
+			</div>
 		</div>
 	</div>
 </body>
