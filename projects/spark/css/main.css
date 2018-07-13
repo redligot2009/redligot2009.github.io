@@ -42,20 +42,36 @@ html { position: relative; min-height: 100%; }
 	border-color:#ffc55f;
 	/*#ffc55f*/
 }
-.nav-item
+#menu .nav-item
 {
 	text-align: center;
+}
+@media only screen and (min-width:  768px) {
+	.navbar { text-align: center; }
+	.navbar-header { display: inline-block; float: none !important; }
+	.navbar-collapse.collapse { display: inline-block !important; }
 }
 /*Breakpoint md for Bootstrap*/
 @media only screen and (max-width: 767px)
 {
-	.navbar-brand {
+	#menu
+	{
+		padding:0;
+		margin:0;
+	}
+	#menu-container
+	{
+		padding:0;
+		margin:0;
+		max-width:100%;
+	}
+	#menu .navbar-brand {
   		transform: translateX(-50%);
   		left: 50%;
   		top:0px;
   		position: absolute;
 	}
-	.navbar-toggler
+	#menu .navbar-toggler
 	{
 		min-height: 85px;
 		border:none;
@@ -77,12 +93,12 @@ html { position: relative; min-height: 100%; }
 		background-color:#381213;
 		/*#ffc55f*/
 	}
-	.navbar
+	#menu .navbar
 	{
 		padding-left: 0px!important;
 		padding-right: 0px!important;
 	}
-	.navbar-collapse
+	#menu .navbar-collapse
 	{
 		background-color: #5b1e20;
 	}
