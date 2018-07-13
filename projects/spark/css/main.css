@@ -2,6 +2,10 @@ body
 {
 	background-color: #EEEEEE;
 }
+img
+{
+	max-width: 100%;
+}
 html { position: relative; min-height: 100%; }
 /*Misc.*/
 #spark-logo-small
